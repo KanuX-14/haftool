@@ -1,0 +1,310 @@
+#!/bin/bash
+#This script was made for educational purpose only.
+#Don't use it to gain advantage in the game!
+#Script made by KanuX-14 with xdotool by jordansissel.
+#You're free to improve the script, just put your name in comments under mine.
+
+clear
+debug_mode=$(xdotool getactivewindow) #If you don't want to see the debug terminal, just comment this line
+echo -e -n "\e[1;33mScript made by\e[0m\e[1;31mKanuX-14\e[0m
+
+[INSTRUCTIONS]:
+
+If you're level \e[31m1~4\e[0m, recommended \e[31m1\e[0m DFF.
+If you're level \e[31m5~9\e[0m, recommended \e[31m2\e[0m DFF.
+If you're level \e[31m10~14\e[0m, recommended \e[31m3\e[0m DFF.
+If you're level \e[31m15~20\e[0m, recommended \e[31m4\e[0m DFF.
+
+[DFF]=Default System Feeding
+
+Recommended using \e[31m2 seconds\e[0m, if you have \e[1;92mgood\e[0m internet.
+Recommended using \e[31m3~5 seconds\e[0m, if you have \e[1;93mmedium\e[0m internet.
+Recommended using \e[31m5~10 seconds\e[0m, if you have \e[1;91mbad\e[0m internet.
+
+\e[1;91mIt's important that you don't move the default location of the training window!\e[0m
+
+\e[1mUsing wrong input will result in exit the script!\e[0m
+
+"
+echo -n "Press [ENTER] to continue..."
+read ENTER && sleep 0.3
+clear
+echo -e "\e[0mWhich level \e[32m[1-20]\e[0m you're in?\e[32m"
+read level && sleep 0.3
+echo -e "\e[0mHow much time \e[32m[seconds]\e[0m do you want?\e[32m"
+read timeIngame && sleep 0.3
+echo -e "\e[0mBy default, eating time is \e[31m10 seconds\e[0m due the random food choosing system." && sleep 0.3
+echo -e "Choose the verbose level of DFF \e[32m[1-9]\e[0m\e[32m"
+read feeding && sleep 1.4
+clear
+if [ $feeding -lt 1 ]
+then
+    echo -e -n "\e[1;91mWrong input! Stopping...\e[0m"
+    sleep 1
+    exit
+elif [ $feeding -eq 1 ] #Data for DFF verbose level 1
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=6; levelY6=7; levelY7=8; levelY8=9; levelY9=10; levelY10=11; levelY11=12; levelY12=13; levelY13=14; levelY14=15; levelY15=16; levelY16=17; levelY17=18; levelY18=19; levelY19=20; levelY20=21; levelYF1=3; levelYF2=0; levelYF3=0; levelYF4=0; levelYF5=0; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 2 ] #Data for DFF verbose level 2
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=9; levelY8=10; levelY9=11; levelY10=12; levelY11=13; levelY12=14; levelY13=15; levelY14=16; levelY15=17; levelY16=18; levelY17=19; levelY18=20; levelY19=21; levelY20=22; levelYF1=3; levelYF2=6; levelYF3=0; levelYF4=0; levelYF5=0; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 3 ] #Data for DFF verbose level 3
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=12; levelY10=13; levelY11=14; levelY12=15; levelY13=16; levelY14=17; levelY15=18; levelY16=19; levelY17=20; levelY18=21; levelY19=22; levelY20=23; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=0; levelYF5=0; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 4 ] #Data for DFF verbose level 4
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=13; levelY10=14; levelY11=15; levelY12=16; levelY13=17; levelY14=18; levelY15=19; levelY16=20; levelY17=21; levelY18=22; levelY19=23; levelY20=24; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=12; levelYF5=0; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 5 ] #Data for DFF verbose level 5
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=10; levelX8=11; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=13; levelY10=14; levelY11=16; levelY12=17; levelY13=18; levelY14=19; levelY15=20; levelY16=21; levelY17=22; levelY18=23; levelY19=24; levelY20=25; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=12; levelYF5=15; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 6 ] #Data for DFF verbose level 6
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=13; levelY10=14; levelY11=16; levelY12=17; levelY13=19; levelY14=20; levelY15=21; levelY16=22; levelY17=23; levelY18=24; levelY19=25; levelY20=26; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=12; levelYF5=15; levelYF6=18; levelYF7=0; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 7 ] #Data for DFF verbose level 7
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=13; levelY10=14; levelY11=16; levelY12=17; levelY13=19; levelY14=20; levelY15=22; levelY16=23; levelY17=24; levelY18=25; levelY19=26; levelY20=27; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=12; levelYF5=15; levelYF6=18; levelYF7=21; levelYF8=0; levelYF9=0
+elif [ $feeding -eq 8 ] #Data for DFF verbose level 8
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=13; levelY10=14; levelY11=16; levelY12=17; levelY13=19; levelY14=20; levelY15=22; levelY16=23; levelY17=25; levelY18=26; levelY19=27; levelY20=28; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=12; levelYF5=15; levelYF6=18; levelYF7=21; levelYF8=24; levelYF9=0
+elif [ $feeding -eq 9 ] #Data for DFF verbose level 9
+then
+    levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=10; levelY8=11; levelY9=13; levelY10=14; levelY11=16; levelY12=17; levelY13=19; levelY14=20; levelY15=22; levelY16=23; levelY17=25; levelY18=26; levelY19=28; levelY20=29; levelYF1=3; levelYF2=6; levelYF3=9; levelYF4=12; levelYF5=15; levelYF6=18; levelYF7=21; levelYF8=24; levelYF9=27
+elif [ $feeding -gt 9 ]
+then
+    echo -e -n "\e[1;91mWrong input! Stopping...\e[0m"
+    sleep 1
+    exit
+fi
+if [ $level -lt 1 ]
+then
+    echo -e -n "\e[1;91mWrong input! Stopping...\e[0m"
+    sleep 1
+    exit
+elif [ $level -eq 1 ] #Check if the level equals to 1
+then
+    buttons=$levelX1
+elif [ $level -eq 2 ] #Check if the level equals to 2
+then
+    buttons=$levelX2
+elif [ $level -eq 3 ] #Check if the level equals to 3
+then
+    buttons=$levelX3
+elif [ $level -eq 4 ] #Check if the level equals to 4
+then
+    buttons=$levelX4
+elif [ $level -eq 5 ] #Check if the level equals to 5
+then
+    buttons=$levelX5
+elif [ $level -eq 6 ] #Check if the level equals to 6
+then
+    buttons=$levelX6
+elif [ $level -eq 7 ] #Check if the level equals to 7
+then
+    buttons=$levelX7
+elif [ $level -eq 8 ] #Check if the level equals to 8
+then
+    buttons=$levelX8
+elif [ $level -eq 9 ] #Check if the level equals to 9
+then
+    buttons=$levelX9
+elif [ $level -eq 10 ] #Check if the level equals to 10
+then
+    buttons=$levelX10
+elif [ $level -eq 11 ] #Check if the level equals to 11
+then
+    buttons=$levelX11
+elif [ $level -eq 12 ] #Check if the level equals to 12
+then
+    buttons=$levelX12
+elif [ $level -eq 13 ] #Check if the level equals to 13
+then
+    buttons=$levelX13
+elif [ $level -eq 14 ] #Check if the level equals to 14
+then
+    buttons=$levelX14
+elif [ $level -eq 15 ] #Check if the level equals to 15
+then
+    buttons=$levelX15
+elif [ $level -eq 16 ] #Check if the level equals to 16
+then
+    buttons=$levelX16
+elif [ $level -eq 17 ] #Check if the level equals to 17
+then
+    buttons=$levelX17
+elif [ $level -eq 18 ] #Check if the level equals to 18
+then
+    buttons=$levelX18
+elif [ $level -eq 19 ] #Check if the level equals to 19
+then
+    buttons=$levelX19
+elif [ $level -eq 20 ] #Check if the level equals to 20
+then
+    buttons=$levelX20
+elif [ $level -gt 20 ]
+then
+    echo -e -n "\e[1;91mWrong input! Stopping...\e[0m"
+    sleep 1
+    exit
+fi
+if [ $feeding -lt 1 ]
+then
+    echo -e -n "\e[1;91mWrong input! Stopping...\e[0m"
+    sleep 1
+    exit
+elif [ $feeding -eq 1 ]
+then
+    buttonsend=$buttons #Calculates the quantity of limit random buttons using DFF verbose level 1
+elif [ $feeding -eq 2 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 2
+elif [ $feeding -eq 3 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 3
+elif [ $feeding -eq 4 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 4
+elif [ $feeding -eq 5 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 5
+elif [ $feeding -eq 6 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 6
+elif [ $feeding -eq 7 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 7
+elif [ $feeding -eq 8 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 8
+elif [ $feeding -eq 9 ]
+then
+    buttonsend=$(($buttons+$feeding)) #Calculates the quantity of limit random buttons using DFF verbose level 9
+elif [ $feeding -gt 9 ]
+then
+    echo -e -n "\e[1;91mWrong input! Stopping...\e[0m"
+    sleep 1
+    exit
+fi
+while [ 1 ]
+do
+    echo -e "\e[1;34mDebug show:\e[0m"; echo -e "\e[1;33mLevel\e[0m=\e[31m$level\e[0m"; echo -e "\e[1;36mTime\e[0m=\e[31m$timeIngame seconds\e[0m"; echo -e "\e[1;35mButtons\e[0m=\e[31m$buttonsend\e[0m"; echo -e "\e[1;32mAverage experience\e[0m=\e[31m$expIn XP\e[0m"
+    randomizer=$(shuf -i 1-$buttonsend -n 1)
+    if [ $randomizer -eq $levelY1 ]
+    then
+        xdotool mousemove 150 325 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Sit Button (Level 1)
+        expIn=$(($expIn+10))
+    elif [ $randomizer -eq $levelY2 ]
+    then
+        xdotool mousemove 240 325 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Drink Button (Level 1)
+        expIn=$(($expIn+5))
+    elif [ $randomizer -eq $levelYF1 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY3 ]
+    then
+        xdotool mousemove 240 350 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Down Button (Level 2)
+        expIn=$(($expIn+10))
+    elif [ $randomizer -eq $levelY4 ]
+    then
+        xdotool mousemove 150 375 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Here Button (Level 3)
+        expIn=$(($expIn+11))
+    elif [ $randomizer -eq $levelYF2 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY5 ]
+    then
+        xdotool mousemove 240 375 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Beg Button (Level 4)
+        expIn=$(($expIn+15))
+    elif [ $randomizer -eq $levelY6 ]
+    then
+        xdotool mousemove 150 400 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Play football Button (Level 5)
+        expIn=$(($expIn+15))
+    elif [ $randomizer -eq $levelYF3 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY7 ]
+    then
+        xdotool mousemove 240 400 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Play dead Button (Level 6)
+        expIn=$(($expIn+20))
+    elif [ $randomizer -eq $levelY8 ]
+    then
+        xdotool mousemove 150 425 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Stay Button (Level 7)
+        expIn=$(($expIn+26))
+    elif [ $randomizer -eq $levelYF4 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY9 ]
+    then
+        xdotool mousemove 240 425 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Follow Button (Level 8)
+        expIn=$(($expIn+30))
+    elif [ $randomizer -eq $levelY10 ]
+    then
+        xdotool mousemove 150 450 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Stand Button (Level 9)
+        expIn=$(($expIn+30))
+    elif [ $randomizer -eq $levelYF5 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY11 ]
+    then
+        xdotool mousemove 240 450 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Jump Button (Level 10)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelY12 ]
+    then
+        xdotool mousemove 150 475 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Speak Button (Level 11)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelYF6 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY13 ]
+    then
+        xdotool mousemove 240 475 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Play Button (Level 12)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelY14 ]
+    then
+        xdotool mousemove 150 500 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Silent Button (Level 13)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelYF7 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY15 ]
+    then
+        xdotool mousemove 240 500 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Nest Button (Level 14)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelY16 ]
+    then
+        xdotool mousemove 150 525 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Follow left Button (Level 15)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelYF8 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY17 ]
+    then
+        xdotool mousemove 240 525 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Follow right Button (Level 15)
+        expIn=$(($expIn+35))
+    elif [ $randomizer -eq $levelY18 ]
+    then
+        xdotool mousemove 150 550 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Move forward Button (Level 15)
+        expIn=$(($expIn+5))
+    elif [ $randomizer -eq $levelYF9 ]
+    then
+        xdotool mousemove 150 350 click 1 && xdotool windowactivate $debug_mode && sleep 10 #Eat Button (DFF)
+        expIn=$(($expIn+2))
+    elif [ $randomizer -eq $levelY19 ]
+    then
+        xdotool mousemove 240 550 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Turn left Button (Level 15)
+        expIn=$(($expIn+5))
+    elif [ $randomizer -eq $levelY20 ]
+    then
+        xdotool mousemove 150 575 click 1 && xdotool windowactivate $debug_mode && sleep $timeIngame #Turn right Button (Level 15)
+        expIn=$(($expIn+5))
+    fi
+    clear
+done
+clear
