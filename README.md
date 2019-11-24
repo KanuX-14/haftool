@@ -3,6 +3,15 @@ Requirements: [xdotool](https://github.com/jordansissel/xdotool)
 
 Tested on: GNU/Linux Debian 10 (Buster)
 
+Usage:
+First of all, you will need to get into haftool folder and give permission to the file be executed. After, run the file.
+
+Example:
+```shell
+chmod +x haftool
+./haftool
+```
+
 (INSTRUCTIONS):
 
 If you're level **1-4**, recommended **1** DFF.
