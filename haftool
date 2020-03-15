@@ -8,7 +8,7 @@ debug_mode=$(xdotool getactivewindow) #If you don't want to see the debug termin
 
 function main(){
     clear
-    elif [ $feeding -eq 1 ]; then #Data for DFF verbose level 1
+    if [ $feeding -eq 1 ]; then #Data for DFF verbose level 1
         levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=6; levelY6=7; levelY7=8; levelY8=9; levelY9=10; levelY10=11; levelY11=12; levelY12=13; levelY13=14; levelY14=15; levelY15=16; levelY16=17; levelY17=18; levelY18=19; levelY19=20; levelY20=21; levelYF1=3; levelYF2=0; levelYF3=0; levelYF4=0; levelYF5=0; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
     elif [ $feeding -eq 2 ]; then #Data for DFF verbose level 2
         levelX1=3; levelX2=4; levelX3=5; levelX4=6; levelX5=7; levelX6=8; levelX7=9; levelX8=10; levelX9=11; levelX10=12; levelX11=13; levelX12=14; levelX13=15; levelX14=16; levelX15=21; levelX16=21; levelX17=21; levelX18=21; levelX19=21; levelX20=21; levelY1=1; levelY2=2; levelY3=4; levelY4=5; levelY5=7; levelY6=8; levelY7=9; levelY8=10; levelY9=11; levelY10=12; levelY11=13; levelY12=14; levelY13=15; levelY14=16; levelY15=17; levelY16=18; levelY17=19; levelY18=20; levelY19=21; levelY20=22; levelYF1=3; levelYF2=6; levelYF3=0; levelYF4=0; levelYF5=0; levelYF6=0; levelYF7=0; levelYF8=0; levelYF9=0
@@ -224,7 +224,7 @@ function functionF(){
 }
 
 function helpF(){
-    "
+    echo "
       Usage:
       
         -l: the level of your pet.
