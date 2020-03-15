@@ -4,7 +4,7 @@
 level=1
 timeIngame=10
 feeding=1
-debug_mode=$(xdotool getactivewindow)#If you don't want to see the debug terminal, just comment this line
+debug_mode=$(xdotool getactivewindow) #If you don't want to see the debug terminal, just comment this line
 
 function main(){
     clear
